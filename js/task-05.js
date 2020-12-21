@@ -12,10 +12,7 @@ const products = [
 const getAllPropValues = function (arr, prop) {
   let allPropValues = [];
   for (const obj of arr) {
-    if (obj[prop] === undefined) {
-      continue;
-    }
-    allPropValues.push(obj[prop]);
+    obj[prop] ? allPropValues.push(obj[prop]) : '';
   }
   return allPropValues;
 };

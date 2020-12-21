@@ -31,7 +31,7 @@ const account = {
     const transaction = {
       amount: amount,
       type: type,
-      id: Math.floor(Math.random() * (10000000 - 1)) + 1,
+      id: this.transactions.length + 1,
     };
     return transaction;
   },
@@ -98,12 +98,12 @@ const account = {
     return typeTotalValue;
   },
 };
-// console.log(account.deposit(200));
-// account.deposit(300);
-// account.deposit(400);
-// account.withdraw(500);
-// account.withdraw(300);
-// console.log(account.transactions);
-// console.log(account.balance);
-// console.log(account.getTransactionTotal('WITHDRAW'));
-// console.log(account.getTransactionDetails(9054317));
+console.log(account.deposit(200));
+account.deposit(300);
+account.deposit(400);
+account.withdraw(500);
+account.withdraw(300);
+console.log(account.transactions);
+console.log(account.balance);
+console.log(account.getTransactionTotal('WITHDRAW'));
+console.log(account.getTransactionDetails(3));
